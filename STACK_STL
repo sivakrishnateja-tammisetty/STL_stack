@@ -4,3 +4,4 @@ Basic features of stack:
 3.overflow(completely full) & underflow(completely empty).
 OPERATIONS:
 Push,pop,top,empty,size
+TIME COMPLEXITY: for all operations is O(1)
