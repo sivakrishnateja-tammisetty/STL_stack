@@ -95,3 +95,28 @@ int main() {
     cout<<"Expected outcome is: "<<ans;
     return 0;
 }
+
+
+//BALANCED PARANTHESIS
+#include<bits/stdc++.h>
+using namespace std;
+int main() {
+    
+    string s="(())";
+    stack<char>st;
+    for(int i=0;i<4;i++)
+    {
+        if(st.size()!=0 && st.top()=='(' && s[i]==')')
+        {
+            st.pop();
+        }
+        else
+        {
+            st.push(s[i]);
+        }
+    }
+    if(st.size()==0)
+    {cout<<"Balanced\n";}
+    else{cout<<"Not Balanced\n";}
+    return 0;
+}
