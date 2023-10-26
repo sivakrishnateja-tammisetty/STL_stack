@@ -30,3 +30,31 @@ for(int i=0;i<n;i++)
 }
 cout<<"The reversed string using stack is:"<<name<<endl;
 return 0;}
+
+
+//REVERSE GIVEN NUMBER USING STACK
+#include<bits/stdc++.h>
+using namespace std;
+int main() {
+    stack<int>st;
+    int n=123;
+    int d;
+    while(n!=0)
+    {
+         d=n%10;
+        st.push(d);
+        n/=10;
+    }
+    int rev_num=0;
+    int multipler=1;
+    while(!st.empty())
+    {
+        int d=st.top();
+        rev_num+=d*multipler;
+        st.pop();
+        multipler*=10;
+        
+    }
+    cout<<"Reverse number is :"<<rev_num<<endl;
+    return 0;
+}
