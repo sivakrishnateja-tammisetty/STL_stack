@@ -5,3 +5,28 @@ Basic features of stack:
 OPERATIONS:
 Push,pop,top,empty,size
 TIME COMPLEXITY: for all operations is O(1)
+
+
+
+
+//GIVEN A STRING< REVERSE IT USING STACK
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+string name="Teja";
+cout<<"Given string is :"<<name<<endl;
+stack<char>st;
+for(auto c:name)
+{
+    st.push(c);
+}
+int n=name.length();
+for(int i=0;i<n;i++)
+{
+    name[i]=st.top();
+    st.pop();
+}
+cout<<"The reversed string using stack is:"<<name<<endl;
+return 0;}
