@@ -58,3 +58,40 @@ int main() {
     cout<<"Reverse number is :"<<rev_num<<endl;
     return 0;
 }
+
+
+//REMOVE ALL ADJACENT DUPLICATES
+#include<bits/stdc++.h>
+using namespace std;
+int main() {
+    string s="abbaca";
+    stack<char>stack1;
+    
+    for(char ch:s){
+         if(!stack1.empty() && stack1.top()==ch)
+         {
+            stack1.pop();
+         }
+         else
+         {
+            stack1.push(ch);
+         }
+    }
+    stack<char>stack2;
+    
+    string ans="";
+    char c;
+    while(!stack1.empty())
+    {
+        c=stack1.top();
+        stack2.push(c);
+        stack1.pop();
+    }
+    while(!stack2.empty())
+    {
+        ans+=stack2.top();
+        stack2.pop();
+    }
+    cout<<"Expected outcome is: "<<ans;
+    return 0;
+}
